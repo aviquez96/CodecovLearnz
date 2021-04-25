@@ -10,4 +10,4 @@ test('subtracts 4 - 1 to equal 3', () => {
 
 test('multiplies 5 * 6 to equal 30', () => {
     expect(multiply(5, 6)).toBe(30);
-}); 
+});  
