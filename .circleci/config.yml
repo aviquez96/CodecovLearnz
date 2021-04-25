@@ -1,7 +1,21 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
+  codecov: codecov/codecov@1.0.2
+jobs:
+  test-and-send-reports:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - run:
+          name: install and run tests
+          command: |
+            npm install && npm test
+      # - codecov/upload:
+      #     file: './coverage/clover.xml'
+      #     token: efbf517c-fc67-4780-8923-dca21721bdf6
 workflows:
-  node-tests:
+  codecov-test:
     jobs:
-      - node/test
+      - test-and-send-reports
