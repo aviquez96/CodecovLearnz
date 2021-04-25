@@ -12,9 +12,9 @@ jobs:
           name: install and run tests
           command: |
             npm install && npm test
-      # - codecov/upload:
-      #     file: './coverage/clover.xml'
-      #     token: efbf517c-fc67-4780-8923-dca21721bdf6
+      - codecov/upload:
+          file: './coverage/clover.xml'
+          token: efbf517c-fc67-4780-8923-dca21721bdf6
 workflows:
   codecov-test:
     jobs:
