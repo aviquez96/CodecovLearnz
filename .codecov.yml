@@ -3,7 +3,7 @@ coverage:
     project:
       default:
         target: 90%    # the required coverage value
-        threshold: 1%
+        threshold: 10%
 comment: 
   behavior: default
   layout: "reach,diff,flags,tree"
