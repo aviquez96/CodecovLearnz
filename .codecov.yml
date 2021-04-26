@@ -1,21 +1,10 @@
-codecov: 
-  require_ci_to_pass: true
+coverage:
+  status:
+    project:
+      default:
+        target: 90%    # the required coverage value
+        threshold: 1%
 comment: 
   behavior: default
   layout: "reach,diff,flags,tree"
   require_changes: false
-coverage: 
-  precision: 2
-  range: "90...100"
-  round: down
-  status: 
-    changes: false
-    patch: true
-    project: true
-parsers: 
-  gcov: 
-    branch_detection: 
-      conditional: true
-      loop: true
-      macro: false
-      method: false
