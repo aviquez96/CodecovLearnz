@@ -16,6 +16,6 @@ test('divides 6 / 2 to equal 3', () => {
     expect(divide(6, 2)).toBe(3);
 });  
 
-// test('divides 8 / 2 to equal 3', () => {
-//     expect(divide(8, 2)).toBe(4);
-// });  
+test('divides 8 / 2 to equal 3', () => {
+    expect(divide(8, 2)).toBe();
+});  
