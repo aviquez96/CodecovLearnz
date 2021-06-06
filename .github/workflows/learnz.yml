@@ -1,0 +1,15 @@
+name: Github Actions Python Standard
+on:
+  push:
+  schedule:
+    - cron: "*/2 * * * *"
+jobs:
+  test-and-upstream:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: Simple Task
+        run: echo "Hello"
+
