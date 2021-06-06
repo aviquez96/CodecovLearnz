@@ -1,6 +1,5 @@
 name: Github Actions Python Standard
 on:
-  push:
   schedule:
     - cron: "*/2 * * * *"
 jobs:
