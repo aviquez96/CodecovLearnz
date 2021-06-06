@@ -16,6 +16,8 @@ jobs:
           cd CodecovLearnz
           sed -i -e "s|.*Last Updated:.*|### Last Updated: $dateAndTime|g" README.md
           rm -f README.md-e
+          git config --global user.email "a@a.com"
+          git config --global user.name "a"
           git add .
           git commit -m "New Build: ${dateAndTime}"
           git push origin master --quiet
