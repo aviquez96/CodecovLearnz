@@ -1,6 +1,6 @@
 echo "Cloning repo..."
 clone_repo(){
-    git clone https://codecov:${GH_TOKEN}@github.com/codecov/python-standard.git
+    git clone https://github.com/aviquez96/CodecovLearnz.git
     cd CodecovLearnz
 }
 
@@ -15,11 +15,13 @@ change_readme() {
 
 echo "Committing changes, pushing to GH repo..."
 commit_and_upload() {
-  
+
+  git config --global user.email "aviquez96@gmail.com"
+  git config --global user.name "Adrian"  
   git add .
   git commit -m "New Build: ${dateAndTime}" 
   git remote rm origin 
-  git remote add origin https://codecov:${GH_TOKEN}@github.com/codecov/python-standard.git
+  git remote add origin https://github.com/aviquez96/CodecovLearnz.git
   git push origin master --quiet
 
 }
