@@ -11,5 +11,5 @@ jobs:
         with:
           fetch-depth: 2
       - name: Simple Task
-        run: bash a.sh
+        run: echo "Hello"
 
