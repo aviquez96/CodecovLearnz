@@ -22,7 +22,7 @@ commit_and_upload() {
   git commit -m "New Build: ${dateAndTime}" 
   git remote rm origin 
   git remote add origin https://github.com/aviquez96/CodecovLearnz.git
-  git push origin master --quiet
+  git push origin main --quiet
 
 }
 
