@@ -1,14 +1,15 @@
-name: Github Actions Python Standard
+name: Master
 on:
+  push:
+    branches:
+      - master
   schedule:
-    - cron: "*/2 * * * *"
+    - cron: '/5 * * * *'
 jobs:
-  test-and-upstream:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
-      - name: Simple Task
-        run: echo "Hello"
-
+    - uses: actions/checkout@v1
+    - name: Running
+      run: |
+        echo "Running!"
