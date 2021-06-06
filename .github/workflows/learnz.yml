@@ -1,7 +1,8 @@
 name: Github Actions Python Standard
-on: [push]
-schedule:
-  - cron: "*/2 * * * *"
+on:
+  push:
+  schedule:
+    - cron: "*/2 * * * *"
 jobs:
   test-and-upstream:
     runs-on: ubuntu-latest
