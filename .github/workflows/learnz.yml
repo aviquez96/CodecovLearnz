@@ -11,18 +11,5 @@ jobs:
         with:
           fetch-depth: 2
       - name: Simple Task
-        run: |
-          git clone https://github.com/aviquez96/CodecovLearnz.git
-          cd CodecovLearnz
-          dateAndTime=`date +"%D %T"`
-          echo "Modifying README.md..."
-          sed -i -e "s|.*Last Updated:.*|### Last Updated: $dateAndTime|g" README.md
-          rm -f README.md-e
-          git config --global user.email "a@a.com"
-          git config --global user.name "a"
-          git add .
-          git commit -m "New Build: ${dateAndTime}"
-          git remote rm origin 
-          git remote add origin https://github.com/aviquez96/CodecovLearnz.git
-          git push origin main --quiet
+        run: bash a.sh
 
