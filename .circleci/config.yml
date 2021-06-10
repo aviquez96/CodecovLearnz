@@ -15,7 +15,19 @@ jobs:
       - codecov/upload:
           file: './coverage/clover.xml'
           token: efbf517c-fc67-4780-8923-dca21721bdf6
+  another:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - run:
+          name: yessss
+          command: echo "helloo"
 workflows:
   codecov-test:
     jobs:
       - test-and-send-reports
+      - another:
+          filters:
+            branches:
+              only: /pull.*/
