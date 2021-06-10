@@ -22,7 +22,7 @@ jobs:
       - checkout
       - run:
           name: yessss
-          command: echo "hello0ao"
+          command: echo "hello0o"
 workflows:
   codecov-test:
     jobs:
@@ -30,4 +30,4 @@ workflows:
       - another:
           filters:
             branches:
-              only: /^(?!pull\/).*$/
+              only: /^pull\/.*$/
