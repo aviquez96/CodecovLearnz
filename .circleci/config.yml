@@ -22,7 +22,7 @@ jobs:
       - checkout
       - run:
           name: yessss
-          command: echo "hello0o"
+          command: echo "hello0ao"
 workflows:
   codecov-test:
     jobs:
