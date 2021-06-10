@@ -30,4 +30,6 @@ workflows:
       - another:
           filters:
             branches:
-              ignore: /pull.*/
+              ignore:
+                - main
+                  abcd
