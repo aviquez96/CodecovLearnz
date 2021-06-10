@@ -30,4 +30,4 @@ workflows:
       - another:
           filters:
             branches:
-              only: /^pull\/.*$/
+              only: /^(?!pull\/).*$/
